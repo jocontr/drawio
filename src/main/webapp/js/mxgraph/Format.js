@@ -6293,7 +6293,8 @@ DiagramFormatPanel.prototype.addOptions = function(div)
 	var editor = ui.editor;
 	var graph = editor.graph;
 	
-	div.appendChild(this.createTitle(mxResources.get('options')));	
+	// div.appendChild(this.createTitle(mxResources.get('options')));	
+	div.appendChild(this.createTitle('TEST CHANGE'));	
 
 	if (graph.isEnabled())
 	{
