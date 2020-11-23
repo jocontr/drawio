@@ -6183,6 +6183,9 @@ DiagramFormatPanel.prototype.init = function()
 		this.container.appendChild(this.addOptions(this.createPanel()));
 		this.container.appendChild(this.addPaperSize(this.createPanel()));
 		this.container.appendChild(this.addStyleOps(this.createPanel()));
+
+		// Prototype work
+		this.container.appendChild(this.addGuidance(this.createPanel()));
 	}
 };
 
@@ -6365,6 +6368,23 @@ DiagramFormatPanel.prototype.addOptions = function(div)
 				ui.removeListener(this.listener);
 			}
 		}));
+	}
+
+	return div;
+};
+
+// Prototype work
+DiagramFormatPanel.prototype.addGuidance = function(div)
+{
+	var ui = this.editorUi;
+	var editor = ui.editor;
+	var graph = editor.graph;
+	
+	// div.appendChild(this.createTitle(mxResources.get('options')));	
+	div.appendChild(this.createTitle('Guidance'));	
+
+	if (graph.isEnabled())
+	{
 	}
 
 	return div;
@@ -6554,8 +6574,7 @@ DiagramFormatPanel.prototype.addPaperSize = function(div)
 	var editor = ui.editor;
 	var graph = editor.graph;
 	
-	// div.appendChild(this.createTitle(mxResources.get('paperSize')));
-	div.appendChild(this.createTitle('TESTTESTTEST'));
+	div.appendChild(this.createTitle(mxResources.get('paperSize')));
 
 	var accessor = PageSetupDialog.addPageFormatPanel(div, 'formatpanel', graph.pageFormat, function(pageFormat)
 	{
