@@ -6554,7 +6554,8 @@ DiagramFormatPanel.prototype.addPaperSize = function(div)
 	var editor = ui.editor;
 	var graph = editor.graph;
 	
-	div.appendChild(this.createTitle(mxResources.get('paperSize')));
+	// div.appendChild(this.createTitle(mxResources.get('paperSize')));
+	div.appendChild(this.createTitle('TESTTESTTEST'));
 
 	var accessor = PageSetupDialog.addPageFormatPanel(div, 'formatpanel', graph.pageFormat, function(pageFormat)
 	{
